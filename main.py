@@ -20,7 +20,7 @@ with open('pages.txt') as f:
 for line in lines:
     driver.get(line)
     labels=driver.find_elements_by_css_selector(".c-comments__content")
-    with open('readme.txt', 'a') as f:
+    with open('out.txt', 'a') as f:
         for label in labels:
             f.write(label.text+'\n')
     
